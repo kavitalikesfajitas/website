@@ -28,7 +28,7 @@ const config = {
         }
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, // to support @font-face rule
+        test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, // to support @font-face rule
         loader: 'url-loader',
         query: {
           limit: '10000',
