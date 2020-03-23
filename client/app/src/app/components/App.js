@@ -36,7 +36,9 @@ export class App extends React.PureComponent {
             <div className={'test'}>
               <div className={'navigation-header'}>
                 KAVITA CHAUDHRY
-                <img src={hamburger} />
+                <div>
+                  <img src={hamburger} id={'show-hamburger'} />
+                </div>
               </div>
             </div>
           </div>
