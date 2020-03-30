@@ -1,0 +1,9 @@
+
+client/node_modules/*
+.idea/workspace.xml
+.idea/website.iml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/encodings.xml
