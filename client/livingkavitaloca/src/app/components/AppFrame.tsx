@@ -18,47 +18,75 @@ const NavigationMenuDiv = styled.div`
   font-size: calc(17px + (36 - 24) * ((100vw - 300px) / (1600 - 300)))
 `
 
-const AppFrame: React.FC = ({children}) => {
-  return (
-    <div className={'container'}>
-        <Header/>
-    <div>{children}</div>
-    </div>
-  );
+const NavigationContainer = styled.div`
+    font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    line-height: 1.5em;
+    font-family: RailwayBold, Arial, serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-variant: all-small-caps;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    @media (max-width: 640px) {
+        color: black;
+    }
+`
+const MobileHamburgerMenu = styled.div`
+visiblity: hidden;
+display: none;
+@media (max-width: 640px) {
+    visibility: visible;
+    display: block;
+}
+`
+
+const AppFrame: React.FC = ({ children }) => {
+    return (
+        <div className={'container'}>
+            <Header />
+            <div>{children}</div>
+        </div>
+    );
 };
 
 const Header = () => {
     return (<div className={'parent-header-div'}>
-    <FlexDiv>
-      <div className={'top-caption-header'}>
-        “LIFE IS EITHER A DARING ADVENTURE OR NOTHING AT ALL.” - HELEN
-        KELLER
-        
-      </div>
-    </FlexDiv>
-    <div className={'header-div'}>
-      <div className={'test'}>
-        <div className={'navigation-header'}>
-         <div> KAVITA CHAUDHRY</div>
-        <NavigationMenu/>
+        <FlexDiv>
+            <div className={'top-caption-header'}>
+                “LIFE IS EITHER A DARING ADVENTURE OR NOTHING AT ALL.” - HELEN
+                KELLER
+
+            </div>
+        </FlexDiv>
+        <div className={'header-div'}>
+            <div className={'test'}>
+                <NavigationContainer>
+                    <div> KAVITA CHAUDHRY</div>
+                
+                    <NavigationMenu />
+                </NavigationContainer>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>)
+    </div>)
 }
 
 const NavigationMenu = () => {
     return (
-    <>
-    <NavigationMenuDiv className="hide-mobile">
-        <div>
-         Adventures</div> 
-         <div>|</div>
-        <div>
-          About Me
-        </div>
-      </NavigationMenuDiv>
-      </>
+        <>
+        < MobileHamburgerMenu><img src={'../../images/icons/hamburger.svg'} /></MobileHamburgerMenu>
+            <NavigationMenuDiv className="hide-mobile">
+                <div>
+                    Adventures</div>
+                <div>|</div>
+                <div>
+                    About Me
+                </div>
+            </NavigationMenuDiv>
+        </>
     )
 }
 
