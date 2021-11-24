@@ -32,6 +32,7 @@
   color: white;
   display: flex;
   flex-direction: row;
+  font-variant: all-small-caps;
   align-items: center;
   justify-content: space-between;
   background-color: transparent;
@@ -42,7 +43,11 @@
   margin-right: 3%;
 }
 
-#show-hamburger {
+.hide-mobile{
+  visibility: visible;
+}
+
+.show-mobile {
   visibility: hidden;
 }
 
@@ -64,8 +69,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
-  background: url('../images/kavita_background.jpg') no-repeat center center
-    fixed;
+  /* background: url('../images/kavita_background.jpg') no-repeat center center
+    fixed; */
+  background-color: maroon;
+
   background-size: cover;
 }
 
@@ -76,17 +83,19 @@
   }
 
   .bgColor {
-    background-color: rgb(151, 166, 180);
+    background-color: white;
   }
 
   .parent-header-div {
     display: flex;
     flex-direction: column;
     grid-row: 1;
-    background-color: rgb(151, 166, 180);
+    background-color: white;
   }
-
-  #show-hamburger {
+  .hide-mobile{
+    display: none;
+  }
+  .show-mobile {
     visibility: visible;
   }
 }
