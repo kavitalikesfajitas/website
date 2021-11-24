@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { sayHello } from '../store/actions/hello';
 import '../../styles/app.css';
-import hamburger from '../../images/icons/hamburger.svg';
+
 import bgImage from '../../images/kavita_background.jpg';
 
 const FlexDiv = styled.div`
@@ -37,7 +37,7 @@ export class App extends React.PureComponent {
               <div className={'navigation-header'}>
                 KAVITA CHAUDHRY
                 <div>
-                  <img src={hamburger} id={'show-hamburger'} />
+                  <img src={'../../images/icons/hamburger.svg'} id={'show-hamburger'} />
                 </div>
               </div>
             </div>
