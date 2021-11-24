@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/app.css';
+import AppFrame from './AppFrame';
 
 
 const FlexDiv = styled.div`
@@ -9,28 +10,31 @@ const FlexDiv = styled.div`
   background-color: white;
 `;
 
+const NavigationMenu = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  color: white;
+  font-family: RailwayBold, Arial, serif;
+  font-size: calc(17px + (36 - 24) * ((100vw - 300px) / (1600 - 300)))
+`
+
+
+const MainText = styled.div`
+  font-family: 'Lobster', cursive;
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: calc(90px + (36 - 24) * ((100vw - 300px) / (1600 - 300)))
+`
+
 const App: React.FC = () => {
   return (
-    <div className={'container'}>
-      <div className={'parent-header-div'}>
-        <FlexDiv>
-          <div className={'top-caption-header'}>
-            “LIFE IS EITHER A DARING ADVENTURE OR NOTHING AT ALL.” - HELEN
-            KELLER
-          </div>
-        </FlexDiv>
-        <div className={'header-div'}>
-          <div className={'test'}>
-            <div className={'navigation-header'}>
-              KAVITA CHAUDHRY
-              <div>
-                <img src={'../../images/icons/hamburger.svg'} id={'show-hamburger'} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   <AppFrame>
+<MainText>
+  Living Kavita Loca
+  </MainText>
+     </AppFrame>
   );
 };
 
