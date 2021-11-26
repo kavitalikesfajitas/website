@@ -75,6 +75,11 @@
 
   background-size: cover;
 }
+@media (max-width: 670px) {
+  .container {
+    margin: 10px;
+  }
+}
 
 @media (max-width: 640px) {
   .top-caption-header {
