@@ -51,7 +51,7 @@ const config = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', 'json']
+    extensions: ['*','.ts', '.tsx', '.js', 'json']
   },
   devServer: {
     port: 5000, // Defaults to 8080,
@@ -59,9 +59,9 @@ const config = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: path.join(__dirname, `${MAIN_DIR_FOLDER}/src`, "index.html"),
+      inject: false
     }),
     new CopyPlugin({
       patterns: [
