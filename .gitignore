@@ -11,3 +11,4 @@ client/dist/*
 client/livingkavitaloca/src/images/.DS_Store
 client/livingkavitaloca/src/.DS_Store
 client/livingkavitaloca/src/.DS_Store
+client/livingkavitaloca/src/client.min.js

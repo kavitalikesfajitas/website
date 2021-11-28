@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/app.css';
+import MenuBar from './MenuBar';
 
 const FlexDiv = styled.div`
     display: flex;
@@ -15,6 +16,10 @@ const NavigationMenuDiv = styled.div`
     color: white;
     font-family: RailwayBold, Arial, serif;
     font-size: calc(17px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    @media (max-width: 640px) {
+        display: none;
+        visibility: hidden;
+    }
 `;
 
 const NavigationContainer = styled.div`
@@ -35,20 +40,10 @@ const NavigationContainer = styled.div`
     }
 `;
 
-const MobileHamburgerMenu = styled.div`
-    visiblity: hidden;
-    display: none;
-    @media (max-width: 640px) {
-        visibility: visible;
-        display: block;
-    }
-`;
 const NavigationMenu = () => {
     return (
         <>
-            <MobileHamburgerMenu>
-                <img src={'../../images/icons/hamburger.svg'} />
-            </MobileHamburgerMenu>
+            <MenuBar />
             <NavigationMenuDiv className="hide-mobile">
                 <div>Adventures</div>
                 <div>|</div>

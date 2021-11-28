@@ -99,6 +99,7 @@
   }
   .hide-mobile{
     display: none;
+    visibility: hidden;
   }
   .show-mobile {
     visibility: visible;
