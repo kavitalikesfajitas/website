@@ -22,14 +22,14 @@ const StyledImg = styled.img`
     max-width: 75%;
 `;
 
-const Main = () => {
+const Main: React.FC = () => {
     return (
-        <>
-        <MainText>Living Kavita Loca</MainText>
-        <ImageDivContainer>
-            <StyledImg src={'../../images/HAD_3985.jpg'} />
-        </ImageDivContainer>
-        </>
-    )
-}
+        <div>
+            <MainText>Living Kavita Loca</MainText>
+            <ImageDivContainer>
+                <StyledImg src={'../../images/HAD_3985.jpg'} />
+            </ImageDivContainer>
+        </div>
+    );
+};
 export default Main;

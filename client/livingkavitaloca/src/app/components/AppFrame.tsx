@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link, Outlet } from 'react-router-dom';
 import '../../styles/app.css';
 import MenuBar from './MenuBar';
 
@@ -47,7 +48,9 @@ const NavigationMenu = () => {
             <NavigationMenuDiv className="hide-mobile">
                 <div>Adventures</div>
                 <div>|</div>
-                <div>About Me</div>
+                <Link to={'/about-me'} key={'about-me'}>
+                    <div>About Me</div>
+                </Link>{' '}
             </NavigationMenuDiv>
         </>
     );
@@ -77,7 +80,7 @@ const AppFrame: React.FC = ({ children }) => {
     return (
         <div className={'container'}>
             <Header />
-            <div>{children}</div>
+            {children}
         </div>
     );
 };

@@ -54,8 +54,10 @@ const config = {
     extensions: ['*','.ts', '.tsx', '.js', 'json']
   },
   devServer: {
-    port: 5000, // Defaults to 8080,
-    open: "index.html"
+    port: 8000, // Defaults to 8080,
+    historyApiFallback: true,
+    open: "index.html",
+    hot: true
   },
 
   plugins: [
