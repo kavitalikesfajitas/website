@@ -4,5 +4,8 @@
     },
     "eslint.workingDirectories": [
       "./client"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "eslint.run": "onSave"
 }
