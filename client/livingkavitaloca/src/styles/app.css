@@ -23,6 +23,24 @@
   src: url('../styles/fonts/Lobster-Regular.ttf');
 }
 
+@font-face {
+  font-family: ArchivoLight;
+  src: url('../styles/fonts/Archivo/Archivo-Light.ttf');
+}
+
+
+@font-face {
+  font-family: ArchivoRegular;
+  src: url('../styles/fonts/Archivo/Archivo-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: ArchivoThin;
+  src: url('../styles/fonts/Archivo/Archivo-Thin.ttf');
+}
+
+
 .navigation-header {
   font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 700;
@@ -71,7 +89,7 @@
   min-height: 100vh;
   /* background: url('../images/kavita_background.jpg') no-repeat center center
     fixed; */
-  background-color: maroon;
+  background-color: black;
 
   background-size: cover;
 }
@@ -95,6 +113,7 @@
     display: flex;
     flex-direction: column;
     grid-row: 1;
+    
     background-color: white;
   }
   .hide-mobile{
@@ -128,4 +147,16 @@ html {
 body {
   margin: 0 0;
   font-size: 15px;
+  
 }
+a {
+  font-family: RailwayBold, Arial, serif;
+  font-variant: all-small-caps;
+}
+
+.header-font-caps {
+  font-variant: all-small-caps;
+  font-family: RailwayBold, Arial, serif;
+  font-size: 20px;
+}
+

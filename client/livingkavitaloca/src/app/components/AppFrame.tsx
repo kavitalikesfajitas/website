@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../styles/app.css';
 import MenuBar from './MenuBar';
 
@@ -16,10 +16,21 @@ const NavigationMenuDiv = styled.div`
     gap: 10px;
     color: white;
     font-family: RailwayBold, Arial, serif;
-    font-size: calc(17px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    font-size: calc(13px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
     @media (max-width: 640px) {
         display: none;
         visibility: hidden;
+    }
+    a:active,
+    a:link,
+    a:visited {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        opacity: 0.7;
     }
 `;
 
@@ -50,7 +61,7 @@ const NavigationMenu = () => {
                 <div>|</div>
                 <Link to={'/about-me'} key={'about-me'}>
                     <div>About Me</div>
-                </Link>{' '}
+                </Link>
             </NavigationMenuDiv>
         </>
     );

@@ -11,6 +11,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import styled from 'styled-components';
@@ -36,54 +37,30 @@ const MenuBar = () => {
     const handleDrawerToggle = () => {
         setOpen(!open);
     };
-    // const MenuOptions = {}.map((item, key) => {
-    //     const { value, menuText, icon } = item;
-    //     return (
-    //         <Link to={`/${value}`} key={key}>
-    //             <ListItem button key={value}>
-    //                 <ListItemIcon>{icon()}</ListItemIcon>
-    //                 <ListItemText
-    //                     className={classes.listItem}
-    //                     primary={menuText}
-    //                     onClick={() => {
-    //                         handleDrawerClose();
-    //                     }}
-    //                 />
-    //             </ListItem>
-    //         </Link>
-    //     );
-    // });
+    const menuList = [{ value: 'about-me', key: 'about-me-link', menuText: 'About Me' }];
+    const MenuOptions = menuList.map((item, key) => {
+        const { value, menuText } = item;
+        return (
+            <Link to={`/${value}`} key={key}>
+                <ListItem button key={value}>
+                    {/* <ListItemIcon>{icon()}</ListItemIcon> */}
+                    <ListItemText
+                        primary={menuText}
+                        onClick={() => {
+                            handleDrawerToggle();
+                        }}
+                    />
+                </ListItem>
+            </Link>
+        );
+    });
     return (
         <>
             <MobileHamburgerMenu>
                 <img src={'../../images/icons/hamburger.svg'} onClick={handleDrawerToggle} />
             </MobileHamburgerMenu>
             <Drawer anchor={'left'} open={open}>
-                <Box
-                    sx={{ width: 250 }}
-                    role="presentation"
-                    onClick={handleDrawerToggle}
-                    onKeyDown={handleDrawerToggle}
-                >
-                    {/* <ChevronRight /> */}
-                    <List>
-                        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        ))}
-                    </List>
-                    <Divider />
-                    <List>
-                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        ))}
-                    </List>
-                </Box>
+                {MenuOptions}
             </Drawer>
         </>
     );
