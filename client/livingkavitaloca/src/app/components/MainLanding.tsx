@@ -1,23 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import Main from './Main';
+import Main from './MainPageTopHalf';
+import SnazzyDivider from './SnazzyDivider';
 
 const MainText = styled.div`
     font-family: 'Lobster', cursive;
     justify-content: center;
     display: flex;
-
+    color: white;
     font-size: calc(50px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
     @media (max-width: 670px) {
         font-size: calc(50px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
         flex-direction: column;
     }
-`;
-const StyledText = styled.span`
-    font-family: 'Lobster', cursive;
-    color: white;
-    border-radius: 20px;
-    font-size: calc(50px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
 `;
 
 const ImageDivContainer = styled.div`
@@ -35,12 +30,12 @@ const FlexDivContainer = styled.div`
     flex-direction: column;
     @media (max-width: 670px) {
         margin-left: 20px;
-        margin-top: 21%;
+        margin-top: 10%;
         margin-right: 20px;
         font-size: 13px;
     }
     @media (max-width: 1070px) {
-        margin-top: 25%;
+        margin-top: 20%;
     }
     @media (max-width: 960px) {
         margin-top: 10%;
@@ -58,42 +53,15 @@ const AboutMeContentDiv = styled.div`
     font-family: 'ArchivoLight', sans-serif;
 `;
 
-const DividerDivContainer = styled.div`
-    text-align: -webkit-center;
-    margin: 10px;
-`;
-const PinkDividerDiv = styled.div`
-    height: 6px;
-    color: #ffaaf5;
-    max-width: 90%;
-    background-color: #ffaaf5;
-`;
-const WhiteDividerDiv = styled.div`
-    height: 6px;
-    color: white;
-    max-width: 90%;
-    background-color: white;
-`;
-const GreenDividerDiv = styled.div`
-    color: #28ff3d;
-    background-color: #28ff3d;
-    max-width: 90%;
-    height: 6px;
-`;
-const AboutMe = () => {
+const MainLanding = () => {
     return (
-        <>
+        <div className="display-flex-column">
             <Main />
             <FlexDivContainer>
                 <ImageDivContainer>
-                    <MainText>
-                        <StyledText>About Me</StyledText>
-                    </MainText>
-                    <DividerDivContainer>
-                        <PinkDividerDiv />
-                        <GreenDividerDiv />
-                        <WhiteDividerDiv />
-                    </DividerDivContainer>
+                    <MainText>About Me</MainText>
+
+                    <SnazzyDivider />
                 </ImageDivContainer>
 
                 <AboutMeContentDiv>
@@ -109,8 +77,8 @@ const AboutMe = () => {
                     </div>
                 </AboutMeContentDiv>
             </FlexDivContainer>
-        </>
+        </div>
     );
 };
 
-export default AboutMe;
+export default MainLanding;

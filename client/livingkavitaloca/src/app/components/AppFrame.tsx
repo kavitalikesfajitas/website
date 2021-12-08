@@ -7,7 +7,7 @@ import MenuBar from './MenuBar';
 const FlexDiv = styled.div`
     display: flex;
     justify-content: flex-end;
-    background-color: white;
+    background-color: #fff6ed;
 `;
 
 const NavigationMenuDiv = styled.div`
@@ -57,10 +57,12 @@ const NavigationMenu = () => {
         <>
             <MenuBar />
             <NavigationMenuDiv className="hide-mobile">
-                <div>Adventures</div>
+                <Link to={'/portfolio'} key={'portfolio'}>
+                    <div>Portfolio</div>
+                </Link>
                 <div>|</div>
-                <Link to={'/about-me'} key={'about-me'}>
-                    <div>About Me</div>
+                <Link to={'/'} key={'home'}>
+                    <div>Home</div>
                 </Link>
             </NavigationMenuDiv>
         </>

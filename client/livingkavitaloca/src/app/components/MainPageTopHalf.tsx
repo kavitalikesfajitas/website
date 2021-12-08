@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 
 const MainText = styled.div`
@@ -11,6 +11,7 @@ const MainText = styled.div`
     @media (max-width: 670px) {
         font-size: calc(50px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
         flex-direction: column;
+        justify-content: flex-start;
     }
 `;
 
@@ -35,7 +36,7 @@ const ColorChangeCssSpan = styled.span`
 `;
 const Main: React.FC = () => {
     return (
-        <div>
+        <>
             <MainText>
                 <ColorChangeCssSpan> Living </ColorChangeCssSpan>
                 <ColorChangeCssSpan color={'#28ff3d'} leftIndent={'10%'}>
@@ -48,7 +49,7 @@ const Main: React.FC = () => {
             <ImageDivContainer>
                 <StyledImg src={'../../images/DSC00684.jpeg'} />
             </ImageDivContainer>
-        </div>
+        </>
     );
 };
 export default Main;
