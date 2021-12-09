@@ -58,7 +58,13 @@
     "workList": [
       {
         "title": "Living Kavita Loca",
-        "description": "This site (livingkavitaloca.com) is a static JS file that is hosted in a AWS S3 bucket and Cloudfront"
+        "description": "This site (livingkavitaloca.com) is a static JS file that is hosted in a AWS S3 bucket and Cloudfront. It's open source and its on my github! Check it out",
+        "links": [
+          {
+            "title": "LivingKavitaLoca GitHub repo",
+            "url": "https://github.com/kavitalikesfajitas/website"
+          }
+        ]
       }
     ]
   }
