@@ -7,7 +7,7 @@ const MAIN_DIR_FOLDER = "livingkavitaloca";
 const IMAGE_DIR = path.resolve(__dirname, `${MAIN_DIR_FOLDER}/src/images`);
 
 const BUILD_DIR = path.resolve(__dirname, `dist/${MAIN_DIR_FOLDER}`);
-const APP_DIR = path.resolve(__dirname, `${MAIN_DIR_FOLDER}/src/app`);
+const APP_DIR = path.resolve(__dirname, `${MAIN_DIR_FOLDER}/src`);
 
 const config = {
   context: path.join(__dirname, `${MAIN_DIR_FOLDER}/src`),
@@ -47,7 +47,7 @@ const config = {
           "css-loader",
           "css-modules-typescript-loader"
         ]
-      }
+      },
     ]
   },
   resolve: {

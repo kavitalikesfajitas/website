@@ -25,10 +25,14 @@ const ImageDivContainer = styled.div`
 
 const StyledImg = styled.img`
     border-radius: 50px;
-
     max-width: 65%;
 `;
-const ColorChangeCssSpan = styled.span`
+
+type ColorChangeCssSpanProps = {
+    color: string;
+    leftIndent: string;
+};
+const ColorChangeCssSpan = styled.span<ColorChangeCssSpanProps>`
     color: ${(props) => (props.color ? props.color : 'white')};
     @media (max-width: 670px) {
         margin-left: ${(props) => (props.leftIndent ? props.leftIndent : '5px')};
@@ -47,7 +51,7 @@ const Main: React.FC = () => {
                 </ColorChangeCssSpan>
             </MainText>
             <ImageDivContainer>
-                <StyledImg src={'../../images/DSC00684.jpeg'} />
+                <StyledImg src={'./images/DSC00684.jpeg'} />
             </ImageDivContainer>
         </>
     );

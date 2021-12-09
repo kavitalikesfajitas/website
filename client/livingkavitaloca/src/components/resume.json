@@ -23,17 +23,17 @@
       {
         "title": "LinkEverywhere",
         "description": "Created LinkEverywhere as a Hackathon project with a designer (Given 48 hours). Mobile App Idea was designed to allow you see what was playing on kiosks near you. ",
-        "img": "../../images/work/intersection/LinkEverywhere.png"
+        "img": "./images/work/intersection/LinkEverywhere.png"
       },
       {
         "title": "Royal Baby Campaign in London",
         "description": "Took Hackathon project, EmojiBarometer and Implemented Play and Java backend with Swarm pipeline and made it an official product - a campaign for Meghan and Harry's Royal Baby in London.",
-        "img": "../../images/work/intersection/VoterPoll.jpeg"
+        "img": "./images/work/intersection/VoterPoll.jpeg"
       },
       {
         "title": "LinkNYC FourSquare Campaigin",
         "description": "Created the LinkNYC FourSquare Campaign that recommends bars, restaurants, outdoors spots ,based on latitude and longitude, walking distance, weather, time of day and  walking radius.",
-        "img": "../../images/work/intersection/FourSquare.jpg",
+        "img": "./images/work/intersection/FourSquare.jpg",
         "links": [
           {
             "title": "FourSquare in NYC",
@@ -58,7 +58,13 @@
     "workList": [
       {
         "title": "Living Kavita Loca",
-        "description": "This site (livingkavitaloca.com) is a static JS file that is hosted in a AWS S3 bucket and Cloudfront"
+        "description": "This site (livingkavitaloca.com) is a static JS file that is hosted in a AWS S3 bucket and Cloudfront. It's open source and its on my github! Check it out",
+        "links": [
+          {
+            "title": "LivingKavitaLoca GitHub repo",
+            "url": "https://github.com/kavitalikesfajitas/website"
+          }
+        ]
       }
     ]
   }

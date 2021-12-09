@@ -18,7 +18,7 @@ export const DividerDiv = styled.div<DividerDivProps>`
     height: 6px;
 `;
 
-const SnazzyDivider = () => (
+const SnazzyDivider: React.FC = () => (
     <DividerDivContainer>
         <DividerDiv color={'#ffaaf5'} />
         <DividerDiv color={'#28ff3d'} maxWidth={'90%'} />

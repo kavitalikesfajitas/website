@@ -1,9 +1,4 @@
 @font-face {
-  font-family: ProximaNova;
-  src: url('../styles/fonts/proxima/ProximaNova-Regular.otf');
-}
-
-@font-face {
   font-family: RailwayBold;
   src: url('../styles/fonts/railway/Raleway-Bold.ttf');
 }

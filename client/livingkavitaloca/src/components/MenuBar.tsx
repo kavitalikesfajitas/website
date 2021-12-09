@@ -3,9 +3,11 @@ import { useState } from 'react';
 import ListItem from '@mui/material/ListItem';
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
+import { grey } from '@mui/material/colors';
 import Drawer from '@mui/material/Drawer';
 import styled from 'styled-components';
-import '../../styles/app.css';
+import '../styles/app.css';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const StyledLinkText = styled.p`
     font-family: 'RailwayBold', Arial, serif !important;
@@ -61,7 +63,7 @@ const MenuBar: React.FC = () => {
     return (
         <>
             <MobileHamburgerMenu>
-                <img src={'../../images/icons/hamburger.svg'} onClick={handleDrawerToggle} />
+                <MenuIcon sx={{ color: grey[900] }} fontSize={'large'} onClick={handleDrawerToggle} />
             </MobileHamburgerMenu>
             <Drawer
                 sx={{
@@ -69,6 +71,7 @@ const MenuBar: React.FC = () => {
                 }}
                 anchor={'right'}
                 open={open}
+                onClick={handleDrawerToggle}
             >
                 <Box
                     sx={{ width: 150 }}
@@ -76,7 +79,8 @@ const MenuBar: React.FC = () => {
                     onClick={handleDrawerToggle}
                     onKeyDown={handleDrawerToggle}
                 >
-                    <StyledLogoImg src={'../../images/logo.png'} /> {MenuOptions}
+                    <StyledLogoImg src={'./images/logo.png'} />
+                    {MenuOptions}
                 </Box>
             </Drawer>
         </>
