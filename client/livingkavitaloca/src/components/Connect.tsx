@@ -17,7 +17,9 @@ const StyledLetsConnect = styled.div`
 const Connect: React.FC = () => {
     return (
         <StyledLetsConnect>
-            <div className="display-flex-center">Let's connect!</div>
+            <div className="display-flex-center" style={{ paddingBottom: '5px' }}>
+                Let's connect!
+            </div>
             <div className="display-flex-center">
                 <a
                     href={'https://www.instagram.com/kavitasutra/'}

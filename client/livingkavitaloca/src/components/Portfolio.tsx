@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import SnazzyDivider from './SnazzyDivider';
 import ModalPopup from './ModalPopup';
@@ -48,10 +48,9 @@ const FlexDivContainer = styled.div`
         margin-right: 20px;
         font-size: 13px;
     }
-
     align-items: baseline;
 `;
-const ImageDivContainer = styled.div`
+const TopDivContainer = styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -117,10 +116,10 @@ const Porfolio: React.FC = () => {
     return (
         <div>
             <FlexDivContainer>
-                <ImageDivContainer>
+                <TopDivContainer>
                     <MainText>Portfolio</MainText>
                     <SnazzyDivider />
-                </ImageDivContainer>
+                </TopDivContainer>
 
                 <AboutMeContentDiv>
                     <p className="header-font-caps font-size-sm-20 display-flex-center">

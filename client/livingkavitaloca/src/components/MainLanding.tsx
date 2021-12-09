@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import Main from './MainPageTopHalf';
 import SnazzyDivider from './SnazzyDivider';
 
-const MainText = styled.div`
+const MainHeaderText = styled.div`
     font-family: 'Lobster', cursive;
     justify-content: center;
     display: flex;
@@ -59,7 +59,7 @@ const MainLanding = () => {
             <Main />
             <FlexDivContainer>
                 <ImageDivContainer>
-                    <MainText>About Me</MainText>
+                    <MainHeaderText>About Me</MainHeaderText>
 
                     <SnazzyDivider />
                 </ImageDivContainer>

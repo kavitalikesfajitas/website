@@ -7,7 +7,7 @@ const MAIN_DIR_FOLDER = "livingkavitaloca";
 const IMAGE_DIR = path.resolve(__dirname, `${MAIN_DIR_FOLDER}/src/images`);
 
 const BUILD_DIR = path.resolve(__dirname, `dist/${MAIN_DIR_FOLDER}`);
-const APP_DIR = path.resolve(__dirname, `${MAIN_DIR_FOLDER}/src/app`);
+const APP_DIR = path.resolve(__dirname, `${MAIN_DIR_FOLDER}/src`);
 
 const config = {
   context: path.join(__dirname, `${MAIN_DIR_FOLDER}/src`),
@@ -20,10 +20,10 @@ const config = {
   },
   module: {
     rules: [
-      {
-        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        loader: "file-loader"
-      },
+      // {
+      //   test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+      //   loader: "file-loader"
+      // },
       {
         test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, // to support @font-face rule
         loader: "url-loader"
@@ -47,6 +47,10 @@ const config = {
           "css-loader",
           "css-modules-typescript-loader"
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       }
     ]
   },

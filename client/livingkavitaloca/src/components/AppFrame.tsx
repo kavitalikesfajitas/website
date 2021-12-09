@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import '../../styles/app.css';
+import '../styles/app.css';
 import MenuBar from './MenuBar';
 import Connect from './Connect';
 
