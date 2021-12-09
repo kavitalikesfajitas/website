@@ -12,6 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "noImplicitAny": false,
+    "resolveJsonModule": true,
     "esModuleInterop": true
   },
   "include": ["./livingkavitaloca/src"]

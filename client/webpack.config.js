@@ -51,17 +51,19 @@ const config = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', 'json']
+    extensions: ['*','.ts', '.tsx', '.js', 'json']
   },
   devServer: {
-    port: 5000, // Defaults to 8080,
-    open: "index.html"
+    port: 8000, // Defaults to 8080,
+    historyApiFallback: true,
+    open: "index.html",
+    hot: true
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./index.html"
+      template: path.join(__dirname, `${MAIN_DIR_FOLDER}/src`, "index.html"),
+      inject: false
     }),
     new CopyPlugin({
       patterns: [

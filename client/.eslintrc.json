@@ -1,5 +1,5 @@
-export default {
-  extends: [
+{
+  "extends": [
       "eslint-config-airbnb-base",
       "eslint-config-airbnb-typescript",
       "plugin:@typescript-eslint/eslint-recommended",
@@ -9,11 +9,12 @@ export default {
       "plugin:react/recommended",
       "plugin:prettier/recommended"
   ],
-  plugins: ["prettier", "@typescript-eslint"],
-  env: {
-      "es6": true
+  "plugins": ["@typescript-eslint","prettier"],
+  "env": {
+      "es6": true,
+      "es2021": true
   },
-  rules: {
+  "rules": {
       "react/prop-types": 1,
       "import/imports-first": ["error", "absolute-first"],
       "quotes": [
@@ -45,20 +46,20 @@ export default {
       "no-alert": "off",
       "semi": "error"
   },
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-      project: "./tsconfig.json",
-      tsconfigRootDir: __dirname,
-      ecmaVersion: "latest", // Allows for the parsing of modern ECMAScript features
-      sourceType: "module", // Allows for the use of imports
-      ecmaFeatures: {
-          jsx: true // Allows for the parsing of JSX
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "project": "./tsconfig.json",
+      "tsconfigRootDir": "./",
+      "ecmaVersion": "latest", // Allows for the parsing of modern ECMAScript features
+      "sourceType": "module", // Allows for the use of imports
+      "ecmaFeatures": {
+        "jsx": true // Allows for the parsing of JSX
       }
   },
 
-  settings: {
-      react: {
-          version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+  "settings": {
+      "react": {
+          "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
       }
   }
 }

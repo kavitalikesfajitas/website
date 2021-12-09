@@ -23,6 +23,24 @@
   src: url('../styles/fonts/Lobster-Regular.ttf');
 }
 
+@font-face {
+  font-family: ArchivoLight;
+  src: url('../styles/fonts/Archivo/Archivo-Light.ttf');
+}
+
+
+@font-face {
+  font-family: ArchivoRegular;
+  src: url('../styles/fonts/Archivo/Archivo-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: ArchivoThin;
+  src: url('../styles/fonts/Archivo/Archivo-Thin.ttf');
+}
+
+
 .navigation-header {
   font-size: calc(24px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 700;
@@ -52,7 +70,7 @@
 }
 
 .top-caption-header {
-  background-color: #fff;
+  background-color:  #fff6ed;
   color: rgba(23, 23, 23, 0.8);
   font-size: 1.1em;
   letter-spacing: 0.2em;
@@ -60,6 +78,12 @@
   max-width: 100%;
   font-family: 'DIN Condensed';
   display: block;
+}
+.font-size-sm-20 {
+  font-size: 20px;
+}
+.font-size-sm-15 {
+  font-size: 15px;
 }
 
 .container {
@@ -69,11 +93,14 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
-  /* background: url('../images/kavita_background.jpg') no-repeat center center
-    fixed; */
-  background-color: maroon;
+  background-color: black;
 
   background-size: cover;
+}
+@media (max-width: 670px) {
+  .container {
+    margin: 10px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -83,17 +110,19 @@
   }
 
   .bgColor {
-    background-color: white;
+    background-color:  #fff6ed;
   }
 
   .parent-header-div {
     display: flex;
     flex-direction: column;
     grid-row: 1;
-    background-color: white;
+    
+    background-color:  #fff6ed;
   }
   .hide-mobile{
     display: none;
+    visibility: hidden;
   }
   .show-mobile {
     visibility: visible;
@@ -122,4 +151,72 @@ html {
 body {
   margin: 0 0;
   font-size: 15px;
+  background-color:  #fff6ed;
+  
+}
+a {
+  font-family: RailwayBold, Arial, serif;
+  font-variant: all-small-caps;
+}
+
+.header-font-caps {
+  font-variant: all-small-caps;
+  font-family: RailwayBold, Arial, serif;
+}
+
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.display-flex-center {
+  display: flex;
+  justify-content: center;
+}
+.display-flex-row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.MuiDialogContent-root {
+  background-color: #fff6ed ;
+}
+.MuiDialogTitle-root {
+  background-color: #fff6ed ;
+  font-variant: all-small-caps;
+  font-size: 2.0rem !important;
+  font-family: RailwayBold, Arial, serif !important;
+}
+.MuiDialogActions-root {
+  font-variant: all-small-caps;
+  font-family: RailwayBold, Arial, serif !important;
+  background-color: #fff6ed ;
+}
+
+.MuiButton-root{
+  font-family: Railway, Arial, serif !important;
+  color: black !important;
+
+}
+
+.MuiButton-root a {
+    color: black !important;
+}
+
+.MuiDrawer-paper {
+  background-color:#fff6ed !important;
+}
+
+.MuiListItemText-root {
+  font-family: Railway, Arial, serif !important;
+}
+.MuiDrawer-paper > a:visited, a:link, a:active {
+  color: black;
+  font-family: Railway, Arial, serif !important;
+  font-size: 20px;
+  text-decoration: none;
+
 }
