@@ -11,7 +11,7 @@ type DividerDivProps = {
     maxWidth?: string;
 };
 
-const DividerDiv = styled.div<DividerDivProps>`
+export const DividerDiv = styled.div<DividerDivProps>`
     color: ${(props) => (props.color ? props.color : 'white')};
     background-color: ${(props) => (props.color ? props.color : 'white')};
     max-width: ${(props) => (props.maxWidth ? props.maxWidth : '100%')};

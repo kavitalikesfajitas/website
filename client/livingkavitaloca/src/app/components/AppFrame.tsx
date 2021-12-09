@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import '../../styles/app.css';
 import MenuBar from './MenuBar';
+import Connect from './Connect';
 
 const FlexDiv = styled.div`
     display: flex;
@@ -52,7 +53,7 @@ const NavigationContainer = styled.div`
     }
 `;
 
-const NavigationMenu = () => {
+const NavigationMenu: React.FC = () => {
     return (
         <>
             <MenuBar />
@@ -68,7 +69,7 @@ const NavigationMenu = () => {
         </>
     );
 };
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <div className={'parent-header-div'}>
             <FlexDiv>
@@ -89,11 +90,16 @@ const Header = () => {
     );
 };
 
-const AppFrame: React.FC = ({ children }) => {
+type AppFrameProps = {
+    children: React.ReactNode;
+};
+
+const AppFrame: React.FC<AppFrameProps> = ({ children }: AppFrameProps) => {
     return (
         <div className={'container'}>
             <Header />
             {children}
+            <Connect />
         </div>
     );
 };

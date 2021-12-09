@@ -66,7 +66,7 @@ const MainLanding = () => {
 
                 <AboutMeContentDiv>
                     <div>
-                        <p className="header-font-caps">HI I'M KAVITA!</p>
+                        <p className="header-font-caps font-size-sm-20">HI I'M KAVITA!</p>
                         I'm a Software Engineer located in New York. I grew up in Baltimore, MD. I went to Lehigh
                         University for Computer Engineering. I would like to consider myself a very passionate
                         individual and I believe that everything you do you should do it with your whole heart. I've

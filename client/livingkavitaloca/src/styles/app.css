@@ -79,6 +79,12 @@
   font-family: 'DIN Condensed';
   display: block;
 }
+.font-size-sm-20 {
+  font-size: 20px;
+}
+.font-size-sm-15 {
+  font-size: 15px;
+}
 
 .container {
   display: grid;
@@ -87,8 +93,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
-  /* background: url('../images/kavita_background.jpg') no-repeat center center
-    fixed; */
   background-color: black;
 
   background-size: cover;
@@ -158,9 +162,8 @@ a {
 .header-font-caps {
   font-variant: all-small-caps;
   font-family: RailwayBold, Arial, serif;
-  font-size: 20px;
-
 }
+
 
 .display-flex-column {
   display: flex;
@@ -189,7 +192,6 @@ a {
 }
 .MuiDialogActions-root {
   font-variant: all-small-caps;
-
   font-family: RailwayBold, Arial, serif !important;
   background-color: #fff6ed ;
 }
@@ -201,25 +203,20 @@ a {
 }
 
 .MuiButton-root a {
-  
     color: black !important;
-  
 }
 
 .MuiDrawer-paper {
   background-color:#fff6ed !important;
-  border: black 2px;
-
-
-
 }
+
 .MuiListItemText-root {
   font-family: Railway, Arial, serif !important;
 }
-.MuiDrawer-paper a:visited, a:link, a:active {
+.MuiDrawer-paper > a:visited, a:link, a:active {
   color: black;
   font-family: Railway, Arial, serif !important;
-  font-size: 20px !important;
+  font-size: 20px;
   text-decoration: none;
 
 }

@@ -13,6 +13,10 @@ const FlexColumnOnMobileDiv = styled.div`
     }
 `;
 
+const ALink = styled.a`
+    font-size: 17px !important;
+`;
+
 const WorkLinkStyledP = styled.p`
     font-variant: all-small-caps;
     font-family: RailwayBold, Arial, serif;
@@ -22,6 +26,7 @@ const WorkLinkStyledP = styled.p`
     a:link,
     a:visited {
         color: black;
+        font-size: 16px;
         text-decoration: underline;
     }
     a:hover {
@@ -103,7 +108,7 @@ type WorkDescription = {
     title: string;
     links?: WorkLink[];
 };
-const Porfolio = () => {
+const Porfolio: React.FC = () => {
     const resumeKeys: string[] = Object.keys(resume).filter((value, index) => value !== 'default');
     const [open, setOpen] = React.useState<boolean>(false);
     const [selectedItem, setSelectedItem] = React.useState<WorkDescription>();
@@ -118,7 +123,7 @@ const Porfolio = () => {
                 </ImageDivContainer>
 
                 <AboutMeContentDiv>
-                    <p className="header-font-caps display-flex-center">
+                    <p className="header-font-caps font-size-sm-20 display-flex-center">
                         Here's some of the cool things I've contributed. Click the underlined titles to see more
                     </p>
                     {resumeKeys.map((workKey, i) => {
@@ -142,14 +147,14 @@ const Porfolio = () => {
                                         <p>
                                             {'Links: '}
                                             {work.links.map((workLink: WorkLink) => (
-                                                <a
+                                                <ALink
                                                     key={workLink.title}
                                                     href={workLink.url}
                                                     target={'_blank'}
                                                     rel="noreferrer"
                                                 >
                                                     {workLink.title}
-                                                </a>
+                                                </ALink>
                                             ))}
                                         </p>
                                     )}
@@ -159,7 +164,7 @@ const Porfolio = () => {
                         return (
                             <div key={`${i}-${workKey}`}>
                                 <PortfolioSubHeader>{workKey}</PortfolioSubHeader>
-                                <p className="header-font-caps display-flex-center">
+                                <p className="header-font-caps font-size-sm-15 display-flex-center">
                                     {tech.map((value, ix) => (ix === 0 ? value : `- ${value}`))}
                                 </p>
 
@@ -168,7 +173,7 @@ const Porfolio = () => {
                             </div>
                         );
                     })}
-                    {selectedItem && (
+                    {selectedItem && selectedItem.img && (
                         <ModalPopup title={selectedItem.title} open={open} handleClose={handleClose}>
                             <div className="display-flex-center">
                                 <StyledImg src={selectedItem.img} />

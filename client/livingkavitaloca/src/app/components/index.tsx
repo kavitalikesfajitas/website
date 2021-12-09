@@ -11,8 +11,8 @@ const App: React.FC = () => {
         <HashRouter>
             <AppFrame>
                 <Switch>
-                    <Route exact path={'/'} render={() => <Home />} />
                     <Route path="/portfolio" render={() => <Portfolio />} />
+                    <Route path={'/'} render={() => <Home />} />
                 </Switch>
             </AppFrame>
         </HashRouter>

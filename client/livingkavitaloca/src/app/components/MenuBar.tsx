@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { useState } from 'react';
 import ListItem from '@mui/material/ListItem';
-
 import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import styled from 'styled-components';
-
 import '../../styles/app.css';
 
 const StyledLinkText = styled.p`
-    font-family: Railway, Arial, serif !important;
+    font-family: 'RailwayBold', Arial, serif !important;
+    letter-spacing: 5px;
+    font-size: 18px;
 `;
 const StyledLogoImg = styled.img`
     max-width: 150px;
@@ -30,18 +30,25 @@ const MobileHamburgerMenu = styled.div`
         align-content: center;
     }
 `;
+
+type MenuEntry = {
+    value: string;
+    key: string;
+    menuText: string;
+};
 const drawerWidth = 150;
-const MenuBar = () => {
+
+const MenuBar: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
 
     const handleDrawerToggle = () => {
         setOpen(!open);
     };
-    const menuList = [
+    const menuList: MenuEntry[] = [
         { value: 'portfolio', key: 'portfolio-link', menuText: 'Portfolio' },
         { value: '', key: 'home-link', menuText: 'Home' },
     ];
-    const MenuOptions = menuList.map((item, key) => {
+    const MenuOptions = menuList.map((item: MenuEntry, key) => {
         const { value, menuText } = item;
         return (
             <Link to={`/${value}`} key={key}>
