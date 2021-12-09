@@ -20,10 +20,10 @@ const config = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-      //   loader: "file-loader"
-      // },
+      {
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        loader: "file-loader"
+      },
       {
         test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, // to support @font-face rule
         loader: "url-loader"
@@ -48,10 +48,6 @@ const config = {
           "css-modules-typescript-loader"
         ]
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      }
     ]
   },
   resolve: {
