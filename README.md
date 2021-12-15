@@ -1,6 +1,6 @@
 # living kavita loca
 
-This website is statically hosted via AWS in an s3 bucket and uses Route53 as DNS and uses CloudFront as CDN to serve this site securely.
+This website is statically hosted via AWS in an s3 bucket and uses Route53 as DNS and uses CloudFront as a CDN to serve this site securely (cheaply and statically).
 
 To enable routing without the usage of a server, it uses react-router's HashRouter
 
