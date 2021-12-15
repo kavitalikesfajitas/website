@@ -1,4 +1,31 @@
 {
+  "Personal": {
+    "technologies": [
+      "TYPESCRIPT",
+      "JAVASCRIPT",
+      "ES6",
+      "REACT",
+      "REDUX",
+      "JSON",
+      "CSS",
+      "HTML5",
+      "AWS",
+      "CLOUDFRONT",
+      "ROUTE53"
+    ],
+    "workList": [
+      {
+        "title": "Living Kavita Loca",
+        "description": "This site (livingkavitaloca.com) a generated static JS file. It is statically hosted via AWS in an s3 bucket and uses Route53 as DNS and uses CloudFront as a CDN to serve this site securely (and for pretty cheap). It's open source and its on my github! Check it out",
+        "links": [
+          {
+            "title": "LivingKavitaLoca GitHub repo",
+            "url": "https://github.com/kavitalikesfajitas/website"
+          }
+        ]
+      }
+    ]
+  },
   "Intersection": {
     "technologies": [
       "JAVA",
@@ -38,31 +65,6 @@
           {
             "title": "FourSquare in NYC",
             "url": "https://foursquare.com/article/enriching-the-streets-of-new-york-city-with-linknyc/"
-          }
-        ]
-      }
-    ]
-  },
-  "Personal": {
-    "technologies": [
-      "TYPESCRIPT",
-      "JAVASCRIPT",
-      "ES6",
-      "REACT",
-      "REDUX",
-      "JSON",
-      "CSS",
-      "HTML5",
-      "AWS"
-    ],
-    "workList": [
-      {
-        "title": "Living Kavita Loca",
-        "description": "This site (livingkavitaloca.com) is a static JS file that is hosted in a AWS S3 bucket and Cloudfront. It's open source and its on my github! Check it out",
-        "links": [
-          {
-            "title": "LivingKavitaLoca GitHub repo",
-            "url": "https://github.com/kavitalikesfajitas/website"
           }
         ]
       }
