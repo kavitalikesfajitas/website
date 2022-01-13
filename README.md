@@ -4,7 +4,7 @@ This website is statically hosted via AWS in an s3 bucket and uses Route53 as DN
 
 To enable routing without the usage of a server, it uses react-router's HashRouter
 
-Its written in React with Typescript and Styled Components
+Its written in React with Typescript and using a combination of styled components and css
 
 # to run locally
 
