@@ -19,7 +19,7 @@ const NavigationMenuDiv = styled.div`
     font-family: RailwayBold, Arial, serif;
     letter-spacing: 0.2em;
     font-weight: 700;
-    font-size: calc(13px + (36 - 24) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
     @media (max-width: 640px) {
         display: none;
         visibility: hidden;
@@ -63,7 +63,7 @@ const NavigationMenu: React.FC = () => {
                 </Link>
                 <div>|</div>
                 <Link to={'/'} key={'home'}>
-                    <div>Home</div>
+                    <div>Old Site</div>
                 </Link>
                 <div>|</div>
                 <a href="https://livingkavitaloca.com">
