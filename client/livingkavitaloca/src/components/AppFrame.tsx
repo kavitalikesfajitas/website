@@ -65,6 +65,10 @@ const NavigationMenu: React.FC = () => {
                 <Link to={'/'} key={'home'}>
                     <div>Home</div>
                 </Link>
+                <div>|</div>
+                <a href="https://livingkavitaloca.com">
+                    <div>New Site</div>
+                </a>
             </NavigationMenuDiv>
         </>
     );
