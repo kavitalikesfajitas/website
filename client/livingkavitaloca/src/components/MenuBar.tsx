@@ -47,13 +47,24 @@ const MenuBar: React.FC = () => {
         setOpen(!open);
     };
     const menuList: MenuEntry[] = [
-        { value: 'portfolio', key: 'portfolio-link', menuText: 'Portfolio' },
-        { value: '', key: 'home-link', menuText: 'Home' },
+        { value: '/portfolio', key: 'portfolio-link', menuText: 'Portfolio' },
+        { value: '/', key: 'old-site-link', menuText: 'Old Site' },
+        { value: 'https://livingkavitaloca.com', key: 'new-site-link', menuText: 'New Site' },
     ];
     const MenuOptions = menuList.map((item: MenuEntry, key) => {
         const { value, menuText } = item;
+
+        if (value.startsWith('https')) {
+            return (
+                <a href={value} rel="noreferrer">
+                    <ListItem button key={value}>
+                        <StyledLinkText onClick={handleDrawerToggle}>{menuText} </StyledLinkText>
+                    </ListItem>
+                </a>
+            );
+        }
         return (
-            <Link to={`/${value}`} key={key}>
+            <Link to={`${value}`} key={key}>
                 <ListItem button key={value}>
                     <StyledLinkText onClick={handleDrawerToggle}>{menuText} </StyledLinkText>
                 </ListItem>
