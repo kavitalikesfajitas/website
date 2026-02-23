@@ -4,7 +4,7 @@
 
 The site received a makeover and now uses Next.js with static export — still statically hosted, same philosophy. The simplicity and approach of this original repository is still perfectly valid; the move was primarily to explore Next.js in the same capacity, experiment with new ideas, and consolidate projects into a monorepo.
 
-You can still view the old version of the site at [living-kavita-loca.com/old-site](https://living-kavita-loca.com/old-site).
+You can still view the old version of the site at [living-kavita-loca.com/old-site](https://www.livingkavitaloca.com/old-site).
 
 ---
 
